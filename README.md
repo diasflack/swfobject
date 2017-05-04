@@ -1,9 +1,12 @@
-# swfobject
+# swfobject-constructor
 
 [![Made by unshift](https://img.shields.io/badge/made%20by-unshift-00ffcc.svg?style=flat-square)](http://unshift.io)[![Version npm](http://img.shields.io/npm/v/swfobject.svg?style=flat-square)](http://browsenpm.org/package/swfobject)[![IRC channel](http://img.shields.io/badge/IRC-irc.freenode.net%23unshift-00a8ff.svg?style=flat-square)](http://webchat.freenode.net/?channels=unshift)
 
 This a browserify compatible version of the `swfobject` library which is used to
 embed flash objects in your browsers.
+
+Function call removed from original library. Now it returns only constructor. It was made because swfobject runs some incredebly dull code in the start, which can affect page loading time.
+So you can run swfobject initialization when you want to.
 
 The full documentation is available at: 
 https://code.google.com/p/swfobject/wiki/documentation
@@ -15,6 +18,12 @@ using npm:
 
 ```
 npm install --save swfobject
+```
+
+```
+import Swfobject from 'swfobject'
+
+let swfobject = Swfobject();
 ```
 
 ## Versioning
